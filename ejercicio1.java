@@ -1,18 +1,21 @@
+/**
+ * 8. Crea un programa que cree un array con 100 números reales aleatorios entre 0.0 y 1.0,
+ *utilizando Math.random(), y luego le pida al usuario un valor real R. Por último, mostrará
+ *cuántos valores del array son igual o superiores a R.
+ *@author José Antonio Pérez Godínez
+ */
 public class ejercicio1 {
     public static void main(String[] args) {
         double[] array = new double[100];
 
-        // Llenar el array con números aleatorios entre 0.0 y 1.0
         for (int i = 0; i < array.length; i++) {
             array[i] = Math.random();
         }
 
-        // Valor real R (puedes modificar este valor)
-        double valorR = 0.5; // Por ejemplo, se puede asignar un valor directamente
+        double valorR = Double.parseDouble(System.console().readLine()); 
 
         int contador = 0;
 
-        // Contar cuántos valores en el array son iguales o superiores a R
         for (double numero : array) {
             if (numero >= valorR) {
                 contador++;
